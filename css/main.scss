@@ -197,7 +197,6 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label {
 .usage{
   display: grid;
   grid-template-columns: VW(198px) VW(705px);
-  grid-template-rows: repeat(4, 1fr);
   grid-auto-flow: column;
   gap: VW(30px) VW(60px);
 
@@ -205,6 +204,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label {
   //height: VW(500px);
 
   &__btn{
+    grid-column: 1/2;
     width: 100%;
     height: VW(58px);
 
@@ -234,6 +234,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label {
 
   &__content{
     display: none;
+    grid-column: 2/3;
 
     &-title{
       font-size: VW(20px);
@@ -244,24 +245,33 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label {
       font-weight: 600;
       font-size: VW(16px);
     }
+
+    &_active{
+      grid-row: span 10;
+      display: block;
+    }
   }
 
-  #oncology-input:checked ~ #oncology-label,
-  #hematology-input:checked ~ #hematology-label,
-  #surgery-input:checked ~ #surgery-label,
-  #therapy-input:checked ~ #therapy-label,
-  {
+  //#oncology-input:checked ~ #oncology-label,
+  //#hematology-input:checked ~ #hematology-label,
+  //#surgery-input:checked ~ #surgery-label,
+  //#therapy-input:checked ~ #therapy-label,
+  //{
+  //  color: #000000;
+  //  border: VW(2px) solid #000000;
+  //}
+  input[type="radio"]:checked+label{
     color: #000000;
     border: VW(2px) solid #000000;
   }
 
-  #oncology-input:checked ~ #oncology-content,
-  #hematology-input:checked ~ #hematology-content,
-  #surgery-input:checked ~ #surgery-content,
-  #therapy-input:checked ~ #therapy-content{
-    grid-row: span 4;
-    display: block;
-  }
+  //#oncology-input:checked ~ #oncology-content,
+  //#hematology-input:checked ~ #hematology-content,
+  //#surgery-input:checked ~ #surgery-content,
+  //#therapy-input:checked ~ #therapy-content{
+  //  grid-row: span 10;
+  //  display: block;
+  //}
 }
 
 .modal{

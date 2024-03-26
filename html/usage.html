@@ -23,28 +23,28 @@
 <section class="usage">
 
 
-    <input class="visually-hidden" type="radio" name="usage" value="oncology" id="oncology-input" checked>
+    <input class="usage__inputBtn visually-hidden" type="radio" name="usage" value="oncology" id="oncology-input" checked>
     <label class="usage__btn" for="oncology-input" id="oncology-label">
         Онкология
     </label>
 
-    <input class="visually-hidden" type="radio" name="usage" value="hematology" id="hematology-input">
+    <input class="usage__inputBtn visually-hidden" type="radio" name="usage" value="hematology" id="hematology-input">
     <label class="usage__btn" for="hematology-input" id="hematology-label">
         Гематология
     </label>
 
-    <input class="visually-hidden" type="radio" name="usage" value="surgery" id="surgery-input">
+    <input class="usage__inputBtn visually-hidden" type="radio" name="usage" value="surgery" id="surgery-input">
     <label class="usage__btn" for="surgery-input" id="surgery-label">
         Хирургия
     </label>
 
-    <input class="visually-hidden" type="radio" name="usage" value="therapy" id="therapy-input">
+    <input class="usage__inputBtn visually-hidden" type="radio" name="usage" value="therapy" id="therapy-input">
     <label class="usage__btn" for="therapy-input" id="therapy-label">
         Терапия
     </label>
 
 
-    <div class="usage__content" id="oncology-content">
+    <div class="usage__content usage__content_active" id="oncology-content">
         <h3 class="usage__content-title">Онкология</h3>
         <p class="usage__content-text">
             Целесообразность применения для наблюдения за пациентами с раком легкого
@@ -92,6 +92,18 @@
         </p>
     </div>
 </section>
+
+<script>
+    let usageBtns = document.querySelectorAll('.usage__inputBtn')
+    let usageTexts = document.querySelectorAll('.usage__content')
+
+    for (let i = 0; i < usageBtns.length; i++){
+        usageBtns[i].addEventListener('click', () => {
+            Array.from(usageTexts).forEach( btn => btn.classList.remove("usage__content_active"))
+            usageTexts[i].classList.toggle("usage__content_active")
+        })
+    }
+</script>
 
 <dialog class="modal modal_auth">
     <form class="modal__content">
