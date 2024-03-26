@@ -21,86 +21,88 @@
 </header>
 
 <section class="usage">
+    <div class="usage__btns">
+        <input class="visually-hidden" type="radio" name="usage" value="oncology" id="oncology-input" checked>
+        <label class="usage__btns-btn" for="oncology-input" id="oncology-label">
+            Онкология
+        </label>
 
+        <input class="visually-hidden" type="radio" name="usage" value="hematology" id="hematology-input">
+        <label class="usage__btns-btn" for="hematology-input" id="hematology-label">
+            Гематология
+        </label>
 
-    <input class="usage__inputBtn visually-hidden" type="radio" name="usage" value="oncology" id="oncology-input" checked>
-    <label class="usage__btn" for="oncology-input" id="oncology-label">
-        Онкология
-    </label>
+        <input class="visually-hidden" type="radio" name="usage" value="surgery" id="surgery-input">
+        <label class="usage__btns-btn" for="surgery-input" id="surgery-label">
+            Хирургия
+        </label>
 
-    <input class="usage__inputBtn visually-hidden" type="radio" name="usage" value="hematology" id="hematology-input">
-    <label class="usage__btn" for="hematology-input" id="hematology-label">
-        Гематология
-    </label>
-
-    <input class="usage__inputBtn visually-hidden" type="radio" name="usage" value="surgery" id="surgery-input">
-    <label class="usage__btn" for="surgery-input" id="surgery-label">
-        Хирургия
-    </label>
-
-    <input class="usage__inputBtn visually-hidden" type="radio" name="usage" value="therapy" id="therapy-input">
-    <label class="usage__btn" for="therapy-input" id="therapy-label">
-        Терапия
-    </label>
-
-
-    <div class="usage__content usage__content_active" id="oncology-content">
-        <h3 class="usage__content-title">Онкология</h3>
-        <p class="usage__content-text">
-            Целесообразность применения для наблюдения за пациентами с раком легкого
-            С50, С64, С43, Саркома Капоша, С18-20.
-            <br><br>
-            Документация иммунокомпрометации пациента
-            <br><br>
-            Фиксация глубины и вида нарушения для реабилитации
-        </p>
+        <input class="visually-hidden" type="radio" name="usage" value="therapy" id="therapy-input">
+        <label class="usage__btns-btn" for="therapy-input" id="therapy-label">
+            Терапия
+        </label>
     </div>
 
-    <div class="usage__content" id="hematology-content">
-        <h3 class="usage__content-title">Гематология</h3>
-        <p class="usage__content-text">
-            Целесообразность применения для наблюдения за пациентами с раком легкого
-            С50, С64, С43, Саркома Капоша, С18-20.
-            <br><br>
-            Документация иммунокомпрометации пациента
-            <br><br>
-            Фиксация глубины и вида нарушения для реабилитации
-        </p>
-    </div>
+    <div class="usage__contents">
 
-    <div class="usage__content" id="surgery-content">
-        <h3 class="usage__content-title">Хирургия</h3>
-        <p class="usage__content-text">
-            Целесообразность применения для наблюдения за пациентами с раком легкого
-            С50, С64, С43, Саркома Капоша, С18-20.
-            <br><br>
-            Документация иммунокомпрометации пациента
-            <br><br>
-            Фиксация глубины и вида нарушения для реабилитации
-        </p>
-    </div>
+        <div class="usage__contents-content usage__contents-content_active" id="oncology-content">
+            <h3 class="usage__contents-content-title">Онкология</h3>
+            <p class="usage__contents-content-text">
+                Целесообразность применения для наблюдения за пациентами с раком легкого
+                С50, С64, С43, Саркома Капоша, С18-20.
+                <br><br>
+                Документация иммунокомпрометации пациента
+                <br><br>
+                Фиксация глубины и вида нарушения для реабилитации
+            </p>
+        </div>
 
-    <div class="usage__content" id="therapy-content">
-        <h3 class="usage__content-title">Терапия</h3>
-        <p class="usage__content-text">
-            Целесообразность применения для наблюдения за пациентами с раком легкого
-            С50, С64, С43, Саркома Капоша, С18-20.
-            <br><br>
-            Документация иммунокомпрометации пациента
-            <br><br>
-            Фиксация глубины и вида нарушения для реабилитации
-        </p>
+        <div class="usage__contents-content" id="hematology-content">
+            <h3 class="usage__contents-content-title">Гематология</h3>
+            <p class="usage__contents-content-text">
+                Целесообразность применения для наблюдения за пациентами с раком легкого
+                С50, С64, С43, Саркома Капоша, С18-20.
+                <br><br>
+                Документация иммунокомпрометации пациента
+                <br><br>
+                Фиксация глубины и вида нарушения для реабилитации
+            </p>
+        </div>
+
+        <div class="usage__contents-content" id="surgery-content">
+            <h3 class="usage__contents-content-title">Хирургия</h3>
+            <p class="usage__contents-content-text">
+                Целесообразность применения для наблюдения за пациентами с раком легкого
+                С50, С64, С43, Саркома Капоша, С18-20.
+                <br><br>
+                Документация иммунокомпрометации пациента
+                <br><br>
+                Фиксация глубины и вида нарушения для реабилитации
+            </p>
+        </div>
+
+        <div class="usage__contents-content" id="therapy-content">
+            <h3 class="usage__contents-content-title">Терапия</h3>
+            <p class="usage__contents-content-text">
+                Целесообразность применения для наблюдения за пациентами с раком легкого
+                С50, С64, С43, Саркома Капоша, С18-20.
+                <br><br>
+                Документация иммунокомпрометации пациента
+                <br><br>
+                Фиксация глубины и вида нарушения для реабилитации
+            </p>
+        </div>
     </div>
 </section>
 
 <script>
-    let usageBtns = document.querySelectorAll('.usage__inputBtn')
-    let usageTexts = document.querySelectorAll('.usage__content')
+    let usageBtns = document.querySelectorAll('.usage__btns-btn')
+    let usageTexts = document.querySelectorAll('.usage__contents-content')
 
     for (let i = 0; i < usageBtns.length; i++){
         usageBtns[i].addEventListener('click', () => {
-            Array.from(usageTexts).forEach( btn => btn.classList.remove("usage__content_active"))
-            usageTexts[i].classList.toggle("usage__content_active")
+            Array.from(usageTexts).forEach( btn => btn.classList.remove("usage__contents-content_active"))
+            usageTexts[i].classList.toggle("usage__contents-content_active")
         })
     }
 </script>

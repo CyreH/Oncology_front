@@ -195,60 +195,67 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label {
 }
 
 .usage{
-  display: grid;
-  grid-template-columns: VW(198px) VW(705px);
-  grid-auto-flow: column;
-  gap: VW(30px) VW(60px);
+  display: flex;
+  gap: VW(60px);
 
   padding: VW(60px) VW(360px);
   //height: VW(500px);
 
-  &__btn{
-    grid-column: 1/2;
-    width: 100%;
-    height: VW(58px);
-
-    font-weight: 600;
-    font-size: VW(16px);
-    color: #00000080;
-
+  &__btns{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: VW(30px);
 
-    border: VW(2px) solid #00000040;
-    border-radius: VW(15px);
+    width: VW(198px);
 
-    cursor: pointer;
+    &-btn{
+      width: 100%;
+      height: VW(58px);
 
-    transition: color ease-in-out 250ms, border ease-in-out 250ms;
-    user-select: none;
-
-    &:hover{
-      color: #000000;
-      border: VW(2px) solid #000000;
-    }
-
-
-  }
-
-  &__content{
-    display: none;
-    grid-column: 2/3;
-
-    &-title{
-      font-size: VW(20px);
-      margin-bottom: VW(30px);
-    }
-
-    &-text{
       font-weight: 600;
       font-size: VW(16px);
-    }
+      color: #00000080;
 
-    &_active{
-      grid-row: span 10;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: VW(2px) solid #00000040;
+      border-radius: VW(15px);
+
+      cursor: pointer;
+
+      transition: color ease-in-out 250ms, border ease-in-out 250ms;
+      user-select: none;
+
+      &:hover{
+        color: #000000;
+        border: VW(2px) solid #000000;
+      }
+
+
+    }
+  }
+
+  &__contents{
+    &-content{
+      display: none;
+      grid-column: 2/3;
+
+      &-title{
+        font-size: VW(20px);
+        margin-bottom: VW(30px);
+      }
+
+      &-text{
+        font-weight: 600;
+        font-size: VW(16px);
+      }
+
+      &_active{
+        grid-row: span 10;
+        display: block;
+      }
     }
   }
 
