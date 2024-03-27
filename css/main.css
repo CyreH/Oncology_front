@@ -165,6 +165,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label {
   flex-direction: column;
   gap: 1.5789473684vw;
   width: 10.4210526316vw;
+  min-width: 10.4210526316vw;
 }
 .usage__btns-btn {
   width: 100%;
@@ -196,6 +197,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label {
 .usage__contents-content-text {
   font-weight: 600;
   font-size: 0.8421052632vw;
+  white-space: pre-line;
 }
 .usage__contents-content_active {
   grid-row: span 10;

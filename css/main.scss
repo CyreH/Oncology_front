@@ -207,6 +207,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label {
     gap: VW(30px);
 
     width: VW(198px);
+    min-width: VW(198px);
 
     &-btn{
       width: 100%;
@@ -250,6 +251,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label {
       &-text{
         font-weight: 600;
         font-size: VW(16px);
+        white-space: pre-line;
       }
 
       &_active{
