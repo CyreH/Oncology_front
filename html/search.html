@@ -6,94 +6,136 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Авторские права</title>
+    <title>Поиск пациентов</title>
 </head>
 <body>
 <header class="header">
     <a href="home.html" class="header__title">Le Ha Im</a>
 
     <div class="header__links">
-        <a href="usage.html" class="header__links-link header__links-link_active">Область применения</a>
+        <a href="usage.html" class="header__links-link">Область применения</a>
         <a href="copyright.html" class="header__links-link">Авторские права</a>
     </div>
 
     <button class="header__enter">Войти</button>
 </header>
 
-<section class="usage">
-    <div class="usage__btns">
-        <input class="visually-hidden" type="radio" name="usage" value="oncology" id="oncology-input" checked>
-        <label class="usage__btns-btn" for="oncology-input" id="oncology-label">
-            Онкология
-        </label>
-
-        <input class="visually-hidden" type="radio" name="usage" value="hematology" id="hematology-input">
-        <label class="usage__btns-btn" for="hematology-input" id="hematology-label">
-            Гематология
-        </label>
-
-        <input class="visually-hidden" type="radio" name="usage" value="surgery" id="surgery-input">
-        <label class="usage__btns-btn" for="surgery-input" id="surgery-label">
-            Хирургия
-        </label>
-
-        <input class="visually-hidden" type="radio" name="usage" value="therapy" id="therapy-input">
-        <label class="usage__btns-btn" for="therapy-input" id="therapy-label">
-            Терапия
-        </label>
+<section class="search">
+    <div class="search__header">
+        <h3 class="search__header-title">Поиск пациента</h3>
+        <button class="search__header-regis">Регистрация пациента</button>
     </div>
 
-    <div class="usage__contents">
+    <div class="search__inputs">
+        <input type="text" class="search__inputs-input" placeholder="Фамилия">
+        <input type="text" class="search__inputs-input" placeholder="Имя">
+        <input type="text" class="search__inputs-input" placeholder="Отчество">
+        <input type="text" class="search__inputs-input" placeholder="Дата Рождения">
 
-        <div class="usage__contents-content usage__contents-content_active" id="oncology-content">
-            <h3 class="usage__contents-content-title">Онкология</h3>
-            <p class="usage__contents-content-text">Целесообразность применения для наблюдения за пациентами с раком легкого
-                С50, С64, С43, Саркома Капоша, С18-20.
-                Документация иммунокомпрометации пациента
-                Фиксация глубины и вида нарушения для реабилитации
-            </p>
+        <button class="search__inputs-btn">Найти</button>
+    </div>
+
+    <div class="search__table">
+        <div class="search__table-titles">
+            <p class="search__table-titles-title">Фамилия</p>
+            <p class="search__table-titles-title">Имя</p>
+            <p class="search__table-titles-title">Отчество</p>
+            <p class="search__table-titles-title">Дата Рождения</p>
+            <p class="search__table-titles-title">Действия</p>
         </div>
 
-        <div class="usage__contents-content" id="hematology-content">
-            <h3 class="usage__contents-content-title">Гематология</h3>
-            <p class="usage__contents-content-text">Целесообразность применения для наблюдения за пациентами с раком легкого
-                С50, С64, С43, Саркома Капоша, С18-20.
-                Документация иммунокомпрометации пациента
-                Фиксация глубины и вида нарушения для реабилитации
-            </p>
+        <div class="search__table-item">
+            <p class="search__table-item-content">Зубенко</p>
+            <p class="search__table-item-content">Михаил</p>
+            <p class="search__table-item-content">Петрович</p>
+            <p class="search__table-item-content">13.08.1991</p>
+
+            <a href="patient.html" class="search__table-item-edit">
+                <svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 13.4952L1 19L6.50476 17L19 4.50476L15.4952 1L3 13.4952Z" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.7998 4L15.9998 7.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.7998 13L6.9998 16.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <div class="search__table-item-btn">
+                <svg width="100%" height="100%" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="28" height="28" rx="8" fill="#FF0000"/>
+                    <path d="M12.5355 10.4645L16.0711 14L12.5355 17.5355" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
         </div>
 
-        <div class="usage__contents-content" id="surgery-content">
-            <h3 class="usage__contents-content-title">Хирургия</h3>
-            <p class="usage__contents-content-text">Целесообразность применения для наблюдения за пациентами с раком легкого
-                С50, С64, С43, Саркома Капоша, С18-20.
-                Документация иммунокомпрометации пациента
-                Фиксация глубины и вида нарушения для реабилитации
-            </p>
+        <div class="search__table-item">
+            <p class="search__table-item-content">Макаравенченко</p>
+            <p class="search__table-item-content">Константин</p>
+            <p class="search__table-item-content">Константинович</p>
+            <p class="search__table-item-content">22.22.2222</p>
+
+            <a href="patient.html" class="search__table-item-edit">
+                <svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 13.4952L1 19L6.50476 17L19 4.50476L15.4952 1L3 13.4952Z" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.7998 4L15.9998 7.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.7998 13L6.9998 16.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <div class="search__table-item-btn">
+                <svg width="100%" height="100%" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="28" height="28" rx="8" fill="#FF0000"/>
+                    <path d="M12.5355 10.4645L16.0711 14L12.5355 17.5355" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
         </div>
 
-        <div class="usage__contents-content" id="therapy-content">
-            <h3 class="usage__contents-content-title">Терапия</h3>
-            <p class="usage__contents-content-text">Целесообразность применения для наблюдения за пациентами с раком легкого
-                С50, С64, С43, Саркома Капоша, С18-20.
-                Документация иммунокомпрометации пациента
-                Фиксация глубины и вида нарушения для реабилитации
-            </p>
+        <div class="search__table-item">
+            <p class="search__table-item-content">Утенков</p>
+            <p class="search__table-item-content">Руслан</p>
+            <p class="search__table-item-content">Мехманович</p>
+            <p class="search__table-item-content">05.08.2003</p>
+
+            <a href="patient.html" class="search__table-item-edit">
+                <svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 13.4952L1 19L6.50476 17L19 4.50476L15.4952 1L3 13.4952Z" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.7998 4L15.9998 7.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.7998 13L6.9998 16.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <div class="search__table-item-btn">
+                <svg width="100%" height="100%" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="28" height="28" rx="8" fill="#FF0000"/>
+                    <path d="M12.5355 10.4645L16.0711 14L12.5355 17.5355" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
         </div>
     </div>
+
 </section>
 
-<script>
-    let usageBtns = document.querySelectorAll('.usage__btns-btn')
-    let usageTexts = document.querySelectorAll('.usage__contents-content')
+<dialog class="modal modal_patient-regis">
+    <form class="modal__content">
+        <button class="modal__content-close" id="closePatientRegisBtn" formmethod="dialog">
+            <img src="../media/crossRed.svg" alt="закрыть"/>
+        </button>
 
-    for (let i = 0; i < usageBtns.length; i++){
-        usageBtns[i].addEventListener('click', () => {
-            Array.from(usageTexts).forEach( btn => btn.classList.remove("usage__contents-content_active"))
-            usageTexts[i].classList.toggle("usage__contents-content_active")
-        })
-    }
-</script>
+        <h2 class="modal__content-title">Пациент</h2>
+
+        <div class="modal__content-input-box">
+            <input type="text" placeholder="ФИО пациента" required>
+        </div>
+
+        <div class="modal__content-input-box">
+            <input type="date" placeholder="Дата рождения" required>
+        </div>
+
+
+        <button type="submit" class="modal__content-submit">Изменить</button>
+    </form>
+</dialog>
 
 <dialog class="modal modal_auth">
     <form class="modal__content">
@@ -172,14 +214,37 @@
 </dialog>
 
 <script>
+    const openPatientRegisBtn = document.querySelector('.search__header-regis')
+    const closePatientRegisBtn = document.getElementById('closePatientRegisBtn')
     const openAuthBtn = document.querySelector('.header__enter')
     const closeAuthBtn = document.getElementById('closeAuthBtn')
     const openAuthBtn1 = document.getElementById('openAuthBtn')
     const openRegisBtn = document.getElementById('openRegisBtn')
     const closeRegisBtn = document.getElementById('closeRegisBtn')
+
     const authModal = document.querySelector('.modal_auth')
     const regisModal = document.querySelector('.modal_regis')
+    const patientRegisModal = document.querySelector('.modal_patient-regis')
 
+    openPatientRegisBtn.addEventListener("click", () => {
+        patientRegisModal.showModal()
+    })
+
+    closePatientRegisBtn.addEventListener("click", () => {
+        patientRegisModal.close()
+    })
+
+    patientRegisModal.addEventListener("mousedown", e => {
+        const dialogDimensions = patientRegisModal.getBoundingClientRect()
+        if (
+            e.clientX < dialogDimensions.left ||
+            e.clientX > dialogDimensions.right ||
+            e.clientY < dialogDimensions.top ||
+            e.clientY > dialogDimensions.bottom
+        ) {
+            patientRegisModal.close()
+        }
+    })
 
     openAuthBtn.addEventListener("click", () => {
         authModal.showModal()

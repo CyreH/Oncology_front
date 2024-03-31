@@ -23,7 +23,7 @@
 <section class="main">
         <h1 class="main__title">Le Ha Im</h1>
 
-        <a href="" class="main__btn">Калькулятор иммунодефицита и регенерации</a>
+        <a href="search.html" class="main__btn">Калькулятор иммунодефицита и регенерации</a>
 </section>
 
 <dialog class="modal modal_auth">
@@ -95,9 +95,9 @@
             </div>
         </div>
 
-        <button type="submit" class="modal__content-submit">Войти</button>
+        <button type="submit" class="modal__content-submit">Зарегистрироваться</button>
 
-        <p class="modal__content-text">Нет аккаунта? <span id="openAuthBtn">Войдите</span>
+        <p class="modal__content-text">Уже зарегистрированы? <span id="openAuthBtn">Войдите</span>
         </p>
     </form>
 </dialog>
@@ -145,7 +145,7 @@
         regisModal.close()
     })
 
-    regisModal.addEventListener("click", e => {
+    regisModal.addEventListener("mousedown", e => {
         const dialogDimensions = regisModal.getBoundingClientRect()
         if (
             e.clientX < dialogDimensions.left ||

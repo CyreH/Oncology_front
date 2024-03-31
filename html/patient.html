@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Авторские права</title>
+    <title>Поиск пациентов</title>
 </head>
 <body>
 <header class="header">
@@ -14,22 +14,81 @@
 
     <div class="header__links">
         <a href="usage.html" class="header__links-link">Область применения</a>
-        <a href="copyright.html" class="header__links-link header__links-link_active">Авторские права</a>
+        <a href="copyright.html" class="header__links-link">Авторские права</a>
     </div>
 
     <button class="header__enter">Войти</button>
 </header>
 
-<section class="copyright">
-    <h3 class="copyright__warning">Внимание!</h3>
+<section class="patient">
+    <div class="patient__header">
+        <div class="patient__header-info">
+            <h3 class="patient__header-info-text">Информациая о пациенте:</h3>
+            <div class="patient__header-info-name">
+                <p>Зубенко Михаил Петрович </p>
+                <div class="patient__header-info-name-img">
+                    <svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 13.4952L1 19L6.50476 17L19 4.50476L15.4952 1L3 13.4952Z" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12.7998 4L15.9998 7.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3.7998 13L6.9998 16.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <p class="patient__header-info-date">Дата Рождения: 12.03.1993</p>
+        </div>
 
-    <p class="copyright__text">
-        Данный сервис является объектом интеллектуальной собственности и охраняется законом.
-        <br>
-        <br>
-        Любое использование содержимого третьими лицами возможно только с письменного разрешения владельца.
-    </p>
+        <button class="patient__header-btn">Добавить анализ</button>
+    </div>
+
+    <div class="patient__table">
+        <div class="patient__table-item">
+            <a href="" class="patient__table-item-links">ОАК</a>
+            <a href="" class="patient__table-item-links">имуннодефицит</a>
+            <a href="" class="patient__table-item-links">цитокоины</a>
+            <p class="patient__table-item-date">Дата исследования: 19.11.2023</p>
+        </div>
+        <div class="patient__table-item">
+            <a href="" class="patient__table-item-links">ОАК</a>
+            <a href="" class="patient__table-item-links">имуннодефицит</a>
+            <a href="" class="patient__table-item-links">цитокоины</a>
+            <p class="patient__table-item-date">Дата исследования: 19.11.2023</p>
+        </div>
+        <div class="patient__table-item">
+            <a href="" class="patient__table-item-links">ОАК</a>
+            <a href="" class="patient__table-item-links">имуннодефицит</a>
+            <a href="" class="patient__table-item-links">цитокоины</a>
+            <p class="patient__table-item-date">Дата исследования: 19.11.2023</p>
+        </div>
+        <div class="patient__table-item">
+            <a href="" class="patient__table-item-links">ОАК</a>
+            <a href="" class="patient__table-item-links">имуннодефицит</a>
+            <a href="" class="patient__table-item-links">цитокоины</a>
+            <p class="patient__table-item-date">Дата исследования: 19.11.2023</p>
+        </div>
+    </div>
+
 </section>
+
+<dialog class="modal modal_patient-regis">
+    <form class="modal__content">
+        <button class="modal__content-close" id="closePatientRegisBtn" formmethod="dialog">
+            <img src="../media/crossRed.svg" alt="закрыть"/>
+        </button>
+
+        <h2 class="modal__content-title">Пациент</h2>
+
+        <div class="modal__content-input-box">
+            <input type="text" placeholder="ФИО пациента" required>
+        </div>
+
+        <div class="modal__content-input-box">
+            <input type="date" placeholder="Дата рождения" required>
+        </div>
+
+
+        <button type="submit" class="modal__content-submit">Изменить</button>
+    </form>
+</dialog>
 
 <dialog class="modal modal_auth">
     <form class="modal__content">
@@ -108,13 +167,37 @@
 </dialog>
 
 <script>
+    const openPatientRegisBtn = document.querySelector('.patient__header-info-name-img')
+    const closePatientRegisBtn = document.getElementById('closePatientRegisBtn')
     const openAuthBtn = document.querySelector('.header__enter')
     const closeAuthBtn = document.getElementById('closeAuthBtn')
     const openAuthBtn1 = document.getElementById('openAuthBtn')
     const openRegisBtn = document.getElementById('openRegisBtn')
     const closeRegisBtn = document.getElementById('closeRegisBtn')
+
     const authModal = document.querySelector('.modal_auth')
     const regisModal = document.querySelector('.modal_regis')
+    const patientRegisModal = document.querySelector('.modal_patient-regis')
+
+    openPatientRegisBtn.addEventListener("click", () => {
+        patientRegisModal.showModal()
+    })
+
+    closePatientRegisBtn.addEventListener("click", () => {
+        patientRegisModal.close()
+    })
+
+    patientRegisModal.addEventListener("mousedown", e => {
+        const dialogDimensions = patientRegisModal.getBoundingClientRect()
+        if (
+            e.clientX < dialogDimensions.left ||
+            e.clientX > dialogDimensions.right ||
+            e.clientY < dialogDimensions.top ||
+            e.clientY > dialogDimensions.bottom
+        ) {
+            patientRegisModal.close()
+        }
+    })
 
     openAuthBtn.addEventListener("click", () => {
         authModal.showModal()
