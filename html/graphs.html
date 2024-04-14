@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Просмотр анализов</title>
+    <title>Графики</title>
 </head>
 <body>
 <header class="header">
@@ -20,92 +20,68 @@
     <button class="header__enter">Войти</button>
 </header>
 
-<section class="patient">
-    <div class="patient__left">
-        <h3 class="patient__left-info">Информациая о пациенте:</h3>
+<section class="graphs">
+    <h2 class="graphs__text">Информациая о пациенте:</h2>
+    <p class="graphs__name">Зубенко Михаил Петрович</p>
+    <div class="graphs__info">
+        <h3 class="graphs__info-diagnose">Диагноз: C50</h3>
+        <p class="graphs__info-date">Дата исследования: 12.03.1993</p>
+    </div>
 
-        <div class="patient__left-name">
-            <p>Зубенко Михаил Петрович</p>
-            <div class="patient__left-name-img">
-                <svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 13.4952L1 19L6.50476 17L19 4.50476L15.4952 1L3 13.4952Z" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12.7998 4L15.9998 7.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.7998 13L6.9998 16.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-        </div>
-        <div class="patient__left-date">
-            <p>Дата Рождения: 12.03.1993</p>
-            <p>Регион: Екатеринбург</p>
+    <h3 class="graphs__title">B-клеточное звено</h3>
+
+    <div class="graphs__result">
+        <div class="graphs__result-pic">
+            <img src="../media/graph.png" alt="граф">
         </div>
 
-        <div class="patient__left-add">
-            <h3 class="patient__left-add-text">Результаты анализов</h3>
-            <button class="patient__left-add-btn">Добавить анализ</button>
-        </div>
+        <div class="graphs__result-info">
+            <h4 class="graphs__result-info-head">Заключение по показателям B-клеточного звена:</h4>
+            <ol class="graphs__result-info-list">
+                <li>Мало (ОВИД 1, 2, 3) или много (лимфоцитоз с превышениемот нормы в 2 раза)</li>
+                <li>Компенсируемый или нет</li>
+                <li>Изменение динамики если есть</li>
+            </ol>
 
-        <div class="patient__left-table">
-            <div class="patient__left-table-item">
-                <a href="analysis.html" class="patient__left-table-item-links">ОАК</a>
-                <a href="analysis.html" class="patient__left-table-item-links">имуннодефицит</a>
-                <a href="analysis.html" class="patient__left-table-item-links">цитокоины</a>
-                <p class="patient__left-table-item-date">Дата: 19.11.2023</p>
-            </div>
-            <div class="patient__left-table-item">
-                <a href="analysis.html" class="patient__left-table-item-links">ОАК</a>
-                <a href="analysis.html" class="patient__left-table-item-links">имуннодефицит</a>
-                <a href="analysis.html" class="patient__left-table-item-links">цитокоины</a>
-                <p class="patient__left-table-item-date">Дата: 19.11.2023</p>
-            </div>
-            <div class="patient__left-table-item">
-                <a href="analysis.html" class="patient__left-table-item-links">ОАК</a>
-                <a href="analysis.html" class="patient__left-table-item-links">имуннодефицит</a>
-                <a href="analysis.html" class="patient__left-table-item-links">цитокоины</a>
-                <p class="patient__left-table-item-date">Дата: 19.11.2023</p>
-            </div>
-            <div class="patient__left-table-item">
-                <a href="analysis.html" class="patient__left-table-item-links">ОАК</a>
-                <a href="analysis.html" class="patient__left-table-item-links">имуннодефицит</a>
-                <a href="analysis.html" class="patient__left-table-item-links">цитокоины</a>
-                <p class="patient__left-table-item-date">Дата: 19.11.2023</p>
-            </div>
+            <h4 class="graphs__result-info-head">Рекомендации для B-клеточного звена:</h4>
+            <ol class="graphs__result-info-list">
+                <li>Мало (ОВИД 1, 2, 3) или много (лимфоцитоз с превышениемот нормы в 2 раза)</li>
+                <li>Компенсируемый или нет</li>
+                <li>Изменение динамики если есть</li>
+            </ol>
+
+            <p class="graphs__result-info-additional">*рекомендации по коррекции лечения требуют консультации с лечащим
+                врачом</p>
         </div>
     </div>
 
-    <div class="patient__right">
-        <h3 class="patient__right-header">Диагноз: C50</h3>
-        <p class="patient__right-text">Комментарий о диагнозе, который говорит нам о диагнозе</p>
+    <h3 class="graphs__title">T-клеточное звено</h3>
 
-        <h3 class="patient__right-header">Дата операции: 12.12.2023</h3>
-        <p class="patient__right-text">Комментарий об операции, которые говорят нам об операции</p>
+    <div class="graphs__result">
+        <div class="graphs__result-pic">
+            <img src="../media/graph.png" alt="граф">
+        </div>
 
-        <h3 class="patient__right-header">Химиотерапия: Да</h3>
-        <p class="patient__right-text">Комментарий о курсах химиотерапии, который говорит нам о химиотерапии</p>
+        <div class="graphs__result-info">
+            <h4 class="graphs__result-info-head">Заключение по показателям B-клеточного звена:</h4>
+            <ol class="graphs__result-info-list">
+                <li>Мало (ОВИД 1, 2, 3) или много (лимфоцитоз с превышениемот нормы в 2 раза)</li>
+                <li>Компенсируемый или нет</li>
+                <li>Изменение динамики если есть</li>
+            </ol>
 
-        <button class="patient__right-btn">Редактировать данные</button>
+            <h4 class="graphs__result-info-head">Рекомендации для B-клеточного звена:</h4>
+            <ol class="graphs__result-info-list">
+                <li>Мало (ОВИД 1, 2, 3) или много (лимфоцитоз с превышениемот нормы в 2 раза)</li>
+                <li>Компенсируемый или нет</li>
+                <li>Изменение динамики если есть</li>
+            </ol>
+
+            <p class="graphs__result-info-additional">*рекомендации по коррекции лечения требуют консультации с лечащим
+                врачом</p>
+        </div>
     </div>
 </section>
-
-<dialog class="modal modal_patient-regis">
-    <form class="modal__content">
-        <button class="modal__content-close" id="closePatientRegisBtn" formmethod="dialog">
-            <img src="../media/crossRed.svg" alt="закрыть"/>
-        </button>
-
-        <h2 class="modal__content-title">Пациент</h2>
-
-        <div class="modal__content-input-box">
-            <input type="text" placeholder="ФИО пациента" required>
-        </div>
-
-        <div class="modal__content-input-box">
-            <input type="date" placeholder="Дата рождения" required>
-        </div>
-
-
-        <button type="submit" class="modal__content-submit">Изменить</button>
-    </form>
-</dialog>
 
 <dialog class="modal modal_auth">
     <form class="modal__content">
@@ -184,37 +160,13 @@
 </dialog>
 
 <script>
-    const openPatientRegisBtn = document.querySelector('.patient__left-name-img')
-    const closePatientRegisBtn = document.getElementById('closePatientRegisBtn')
     const openAuthBtn = document.querySelector('.header__enter')
     const closeAuthBtn = document.getElementById('closeAuthBtn')
     const openAuthBtn1 = document.getElementById('openAuthBtn')
     const openRegisBtn = document.getElementById('openRegisBtn')
     const closeRegisBtn = document.getElementById('closeRegisBtn')
-
     const authModal = document.querySelector('.modal_auth')
     const regisModal = document.querySelector('.modal_regis')
-    const patientRegisModal = document.querySelector('.modal_patient-regis')
-
-    openPatientRegisBtn.addEventListener("click", () => {
-        patientRegisModal.showModal()
-    })
-
-    closePatientRegisBtn.addEventListener("click", () => {
-        patientRegisModal.close()
-    })
-
-    patientRegisModal.addEventListener("mousedown", e => {
-        const dialogDimensions = patientRegisModal.getBoundingClientRect()
-        if (
-            e.clientX < dialogDimensions.left ||
-            e.clientX > dialogDimensions.right ||
-            e.clientY < dialogDimensions.top ||
-            e.clientY > dialogDimensions.bottom
-        ) {
-            patientRegisModal.close()
-        }
-    })
 
     openAuthBtn.addEventListener("click", () => {
         authModal.showModal()
