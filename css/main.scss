@@ -418,108 +418,168 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label {
 
 .patient{
   display: flex;
-  flex-direction: column;
-  gap: VW(57px);
+  justify-content: space-between;
+  //gap: VW(115px);
 
   padding: VW(60px) VW(360px);
 
-  &__header{
+  &__left{
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
+    //width: 100%;
 
     &-info{
+        font-size: VW(24px);
+    }
+
+    &-name{
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      gap: VW(30px);
+      align-items: center;
+
+      margin-top: VW(30px);
+
+      p{
+        font-weight: 600;
+        font-size: VW(24px);
+      }
+
+      &-img{
+        cursor: pointer;
+        width: VW(18px);
+        height: VW(18px);
+      }
+    }
+
+    &-date{
+      display: flex;
+      gap: VW(30px);
+      margin-top: VW(15px);
+
+      p{
+        font-weight: 600;
+        font-size: VW(16px);
+        white-space: nowrap;
+      }
+    }
+
+    &-add{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-top: VW(52px);
 
       &-text{
         font-size: VW(24px);
       }
 
-      &-name{
-        display: flex;
-        gap: VW(20px);
-        align-items: center;
+      &-btn{
+        width: VW(230px);
+        height: VW(58px);
 
-        margin-top: VW(30px);
+        color: #FFFFFF;
+        background: #FF0000;
 
-        p{
-          font-size: VW(24px);
-        }
-
-        &-img{
-          cursor: pointer;
-          width: VW(18px);
-          height: VW(18px);
-        }
-      }
-
-      &-date{
+        font-weight: 600;
         font-size: VW(16px);
-        margin-top: VW(13px);
+
+        outline: none;
+        border: none;
+        border-radius: VW(15px);
+
+        cursor: pointer;
+        user-select: none;
+
+        transition: background ease-in-out 250ms;
+
+        &:hover{
+          background: #C80000;
+        }
       }
     }
 
-    &-btn{
-      width: VW(230px);
-      height: VW(58px);
+    &-table{
+      display: flex;
+      flex-direction: column;
+      gap: VW(30px);
+      margin-top: VW(44px);
 
-      color: #FFFFFF;
-      background: #FF0000;
+      &-item{
+        display: flex;
+        gap: VW(50px);
+        align-items: center;
+        justify-content: center;
 
-      font-weight: 600;
-      font-size: VW(16px);
+        padding: VW(19px) VW(50px);
 
-      outline: none;
-      border: none;
-      border-radius: VW(15px);
 
-      cursor: pointer;
-      
-      transition: background ease-in-out 250ms;
+        border-width: VW(1px) 0 VW(1px) 0;
+        border-style: solid;
+        border-color: #D0D0D080;
 
-      &:hover{
-        background: #C80000;
+        &-links{
+          font-weight: 600;
+          font-size: VW(18px);
+          color: #FF0000;
+
+          transition: color ease-in-out 250ms;
+
+          &:hover{
+            color: #C80000;
+          }
+        }
+
+        &-date{
+          font-weight: 600;
+          font-size: VW(18px);
+
+          white-space: nowrap;
+        }
       }
     }
   }
 
-  &__table{
+  &__right{
+    min-width: VW(384px);
+    width: VW(384px);
+
     display: flex;
     flex-direction: column;
-    gap: VW(30px);
 
-    &-item{
-      display: flex;
-      gap: VW(120px);
-      align-items: center;
-      justify-content: center;
+    &-header{
+      margin-bottom: VW(30px);
+    }
 
-      padding: VW(19px) VW(100px);
+    &-text{
+      font-weight: 600;
+      font-size: VW(18px);
+      margin-bottom: VW(50px);
+    }
 
+    &-btn{
+      width: 100%;
+      height: VW(58px);
 
-      border-width: VW(1px) 0 VW(1px) 0;
-      border-style: solid;
-      border-color: #D0D0D080;
+      font-weight: 600;
+      font-size: VW(16px);
 
-      &-links{
-        font-weight: 600;
-        font-size: VW(18px);
-        color: #FF0000;
+      color: #FFFFFF;
+      background-color: #000000;
 
-        transition: color ease-in-out 250ms;
+      border-radius: VW(15px);
+      border: none;
+      outline: none;
 
-        &:hover{
-          color: #C80000;
-        }
-      }
+      cursor: pointer;
+      user-select: none;
 
-      &-date{
-        font-weight: 600;
-        font-size: VW(18px);
+      box-shadow: 0 0 VW(80px) 0 #00000014;
 
-        white-space: nowrap;
+      transition: background ease-in-out 250ms;
+
+      &:hover{
+        background: #1A0000;
       }
     }
   }

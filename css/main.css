@@ -308,42 +308,51 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label {
 
 .patient {
   display: flex;
-  flex-direction: column;
-  gap: 3vw;
+  justify-content: space-between;
   padding: 3.1578947368vw 18.9473684211vw;
 }
-.patient__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-.patient__header-info {
+.patient__left {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
-.patient__header-info-text {
+.patient__left-info {
   font-size: 1.2631578947vw;
 }
-.patient__header-info-name {
+.patient__left-name {
   display: flex;
-  gap: 1.0526315789vw;
+  gap: 1.5789473684vw;
   align-items: center;
   margin-top: 1.5789473684vw;
 }
-.patient__header-info-name p {
+.patient__left-name p {
+  font-weight: 600;
   font-size: 1.2631578947vw;
 }
-.patient__header-info-name-img {
+.patient__left-name-img {
   cursor: pointer;
   width: 0.9473684211vw;
   height: 0.9473684211vw;
 }
-.patient__header-info-date {
-  font-size: 0.8421052632vw;
-  margin-top: 0.6842105263vw;
+.patient__left-date {
+  display: flex;
+  gap: 1.5789473684vw;
+  margin-top: 0.7894736842vw;
 }
-.patient__header-btn {
+.patient__left-date p {
+  font-weight: 600;
+  font-size: 0.8421052632vw;
+  white-space: nowrap;
+}
+.patient__left-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.7368421053vw;
+}
+.patient__left-add-text {
+  font-size: 1.2631578947vw;
+}
+.patient__left-add-btn {
   width: 12.1052631579vw;
   height: 3.0526315789vw;
   color: #FFFFFF;
@@ -354,39 +363,73 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label {
   border: none;
   border-radius: 0.7894736842vw;
   cursor: pointer;
+  user-select: none;
   transition: background ease-in-out 250ms;
 }
-.patient__header-btn:hover {
+.patient__left-add-btn:hover {
   background: #C80000;
 }
-.patient__table {
+.patient__left-table {
   display: flex;
   flex-direction: column;
   gap: 1.5789473684vw;
+  margin-top: 2.3157894737vw;
 }
-.patient__table-item {
+.patient__left-table-item {
   display: flex;
-  gap: 6.3157894737vw;
+  gap: 2.6315789474vw;
   align-items: center;
   justify-content: center;
-  padding: 1vw 5.2631578947vw;
+  padding: 1vw 2.6315789474vw;
   border-width: 0.0526315789vw 0 0.0526315789vw 0;
   border-style: solid;
   border-color: rgba(208, 208, 208, 0.5019607843);
 }
-.patient__table-item-links {
+.patient__left-table-item-links {
   font-weight: 600;
   font-size: 0.9473684211vw;
   color: #FF0000;
   transition: color ease-in-out 250ms;
 }
-.patient__table-item-links:hover {
+.patient__left-table-item-links:hover {
   color: #C80000;
 }
-.patient__table-item-date {
+.patient__left-table-item-date {
   font-weight: 600;
   font-size: 0.9473684211vw;
   white-space: nowrap;
+}
+.patient__right {
+  min-width: 20.2105263158vw;
+  width: 20.2105263158vw;
+  display: flex;
+  flex-direction: column;
+}
+.patient__right-header {
+  margin-bottom: 1.5789473684vw;
+}
+.patient__right-text {
+  font-weight: 600;
+  font-size: 0.9473684211vw;
+  margin-bottom: 2.6315789474vw;
+}
+.patient__right-btn {
+  width: 100%;
+  height: 3.0526315789vw;
+  font-weight: 600;
+  font-size: 0.8421052632vw;
+  color: #FFFFFF;
+  background-color: #000000;
+  border-radius: 0.7894736842vw;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 0 4.2105263158vw 0 rgba(0, 0, 0, 0.0784313725);
+  transition: background ease-in-out 250ms;
+}
+.patient__right-btn:hover {
+  background: #1A0000;
 }
 
 .modal {
