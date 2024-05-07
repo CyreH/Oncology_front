@@ -21,14 +21,106 @@
 </header>
 
 <section class="graphs">
-    <h2 class="graphs__text">Информациая о пациенте:</h2>
+    <div class="graphs__text">
+        <p>Информациая о пациенте:</p>
+
+        <button class="graphs__text-print" onclick="window.print()">Печать</button>
+    </div>
     <p class="graphs__name">Зубенко Михаил Петрович</p>
     <div class="graphs__info">
         <h3 class="graphs__info-diagnose">Диагноз: C50</h3>
         <p class="graphs__info-date">Дата исследования: 12.03.1993</p>
+
+        <a href="analysis.html" class="graphs__info-backbtn">К анализам</a>
+    </div>
+
+    <div class="graphs__analysis">
+        <h3 class="graphs__analysis-header">Сравнение анализов</h3>
+
+        <table class="graphs__analysis-table">
+            <thead>
+            <tr>
+                <th>Показатель</th>
+                <th>Среднее по <br> предыдущим</th>
+                <th>Текущий</th>
+                <th>Ед. изм.</th>
+                <th>Реф. интервал</th>
+                <th>Изменения</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Лейкоциты (WBC)</td>
+                <td>36.71</td>
+                <td>6.71</td>
+                <td>10e9/л</td>
+                <td>(0.00 - 0.80)</td>
+                <td>+6.71%</td>
+            </tr>
+            <tr>
+                <td>Т-цитоксические лимфоциты (CD3+CD8+)</td>
+                <td>26.71</td>
+                <td>6.71</td>
+                <td>10e9/л</td>
+                <td>(0.00 - 0.80)</td>
+                <td>-1%</td>
+            </tr>
+            <tr>
+                <td>CD3+IFNy+ (стимулированный)</td>
+                <td>16.71</td>
+                <td>32.300</td>
+                <td>%</td>
+                <td>(10.900-18.600)</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Лейкоциты (WBC)</td>
+                <td>36.71</td>
+                <td>6.71</td>
+                <td>10e9/л</td>
+                <td>(0.00 - 0.80)</td>
+                <td>+6.71%</td>
+            </tr>
+            <tr>
+                <td>Лейкоциты (WBC)</td>
+                <td>36.71</td>
+                <td>6.71</td>
+                <td>10e9/л</td>
+                <td>(0.00 - 0.80)</td>
+                <td>+6.71%</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 
     <h3 class="graphs__title">B-клеточное звено</h3>
+
+    <div class="graphs__result">
+        <div class="graphs__result-pic">
+            <img src="../media/graph.png" alt="граф">
+        </div>
+
+        <div class="graphs__result-info">
+            <h4 class="graphs__result-info-head">Заключение по показателям B-клеточного звена:</h4>
+            <ol class="graphs__result-info-list">
+                <li>Мало (ОВИД 1, 2, 3) или много (лимфоцитоз с превышениемот нормы в 2 раза)</li>
+                <li>Компенсируемый или нет</li>
+                <li>Изменение динамики если есть</li>
+            </ol>
+
+            <h4 class="graphs__result-info-head">Рекомендации для B-клеточного звена:</h4>
+            <ol class="graphs__result-info-list">
+                <li>Мало (ОВИД 1, 2, 3) или много (лимфоцитоз с превышениемот нормы в 2 раза)</li>
+                <li>Компенсируемый или нет</li>
+                <li>Изменение динамики если есть</li>
+            </ol>
+
+            <p class="graphs__result-info-additional">*рекомендации по коррекции лечения требуют консультации с лечащим
+                врачом</p>
+        </div>
+    </div>
+
+    <h3 class="graphs__title">T-клеточное звено</h3>
 
     <div class="graphs__result">
         <div class="graphs__result-pic">

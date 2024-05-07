@@ -81,17 +81,17 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
   background-color: #FFFFFF;
   box-shadow: 0 VW(4px) VW(80px) 0 #0000000D;
 
-  &__title{
+  &__title {
     text-decoration: none;
   }
 
-  &__links{
+  &__links {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: VW(50px);
 
-    &-link{
+    &-link {
       font-weight: 600;
       font-size: VW(16px);
 
@@ -99,17 +99,17 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
       transition: color ease-in-out 250ms;
 
-      &:hover{
+      &:hover {
         color: #FF0000;
       }
 
-      &_active{
+      &_active {
         color: #FF0000;
       }
     }
   }
 
-  &__enter{
+  &__enter {
     width: VW(95px);
     height: VW(42px);
 
@@ -127,13 +127,13 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
     transition: background-color ease-in-out 250ms;
 
-    &:hover{
+    &:hover {
       background-color: #D70000;
     }
   }
 }
 
-.main{
+.main {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -144,12 +144,12 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
   align-items: center;
   gap: VW(30px);
 
-  &__title{
+  &__title {
     font-weight: 700;
     font-size: VW(120px);
   }
 
-  &__btn{
+  &__btn {
     width: VW(552px);
     height: VW(58px);
 
@@ -172,36 +172,36 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
     transition: background-color ease-in-out 250ms;
 
-    &:hover{
+    &:hover {
       background-color: #D70000;
     }
   }
 }
 
-.copyright{
+.copyright {
   padding: VW(60px) VW(360px);
   display: flex;
   flex-direction: column;
   gap: VW(30px);
 
-  &__warning{
+  &__warning {
     font-size: VW(20px);
   }
 
-  &__text{
+  &__text {
     font-weight: 600;
     font-size: VW(16px);
   }
 }
 
-.usage{
+.usage {
   display: flex;
   gap: VW(60px);
 
   padding: VW(60px) VW(360px);
   //height: VW(500px);
 
-  &__btns{
+  &__btns {
     display: flex;
     flex-direction: column;
     gap: VW(30px);
@@ -209,7 +209,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
     width: VW(198px);
     min-width: VW(198px);
 
-    &-btn{
+    &-btn {
       width: 100%;
       height: VW(58px);
 
@@ -229,7 +229,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
       transition: color ease-in-out 250ms, border ease-in-out 250ms;
       user-select: none;
 
-      &:hover{
+      &:hover {
         color: #000000;
         border: VW(2px) solid #000000;
       }
@@ -238,23 +238,23 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
     }
   }
 
-  &__contents{
-    &-content{
+  &__contents {
+    &-content {
       display: none;
       grid-column: 2/3;
 
-      &-title{
+      &-title {
         font-size: VW(20px);
         margin-bottom: VW(30px);
       }
 
-      &-text{
+      &-text {
         font-weight: 600;
         font-size: VW(16px);
         white-space: pre-line;
       }
 
-      &_active{
+      &_active {
         grid-row: span 10;
         display: block;
       }
@@ -269,7 +269,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
   //  color: #000000;
   //  border: VW(2px) solid #000000;
   //}
-  input[type="radio"]:checked+label{
+  input[type="radio"]:checked + label {
     color: #000000;
     border: VW(2px) solid #000000;
   }
@@ -283,22 +283,22 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
   //}
 }
 
-.search{
+.search {
   display: flex;
   flex-direction: column;
   gap: VW(50px);
 
   padding: VW(60px) VW(360px);
 
-  &__header{
+  &__header {
     display: flex;
     gap: VW(60px);
 
-    &-title{
+    &-title {
 
     }
 
-    &-regis{
+    &-regis {
       outline: none;
       border: none;
       background: none;
@@ -310,13 +310,13 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
       transition: color ease-in-out 250ms;
 
-      &:hover{
+      &:hover {
         color: #C80000;
       }
     }
   }
 
-  &__inputs{
+  &__inputs {
     display: flex;
     gap: VW(40px);
     align-items: center;
@@ -324,7 +324,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
     height: VW(58px);
 
-    &-input{
+    &-input {
       width: VW(226px);
       height: 100%;
 
@@ -337,13 +337,13 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
       padding: 0 VW(30px);
 
-      &::placeholder{
+      &::placeholder {
         font-weight: 600;
         font-size: VW(16px);
       }
     }
 
-    &-btn{
+    &-btn {
       outline: none;
       border: none;
       border-radius: VW(15px);
@@ -361,17 +361,17 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
       transition: background ease-in-out 250ms;
 
-      &:hover{
+      &:hover {
         background: #C80000;
       }
     }
   }
 
-  &__table{
+  &__table {
     display: flex;
     flex-direction: column;
 
-    &-titles{
+    &-titles {
       display: grid;
       grid-template-columns: VW(241px) VW(191px) VW(240px) VW(234px) 1fr;
 
@@ -380,14 +380,14 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
       border-color: #D0D0D080;
       padding: VW(19px) VW(100px);
 
-      &-title{
+      &-title {
         font-weight: 600;
         font-size: VW(18px);
         color: #00000080;
       }
     }
 
-    &-item{
+    &-item {
       display: grid;
       grid-template-columns: VW(241px) VW(191px) VW(265px) VW(217px)  VW(58px) VW(28px);
       align-items: center;
@@ -395,18 +395,18 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
       border-bottom: VW(1px) solid #D0D0D080;
       padding: VW(19px) VW(100px);
 
-      &-content{
+      &-content {
         font-weight: 600;
         font-size: VW(18px);
       }
 
-      &-edit{
+      &-edit {
         width: VW(18px);
         height: VW(18px);
         cursor: pointer;
       }
 
-      &-btn{
+      &-btn {
         width: VW(28px);
         height: VW(28px);
         cursor: pointer;
@@ -416,65 +416,65 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
 }
 
-.patient{
+.patient {
   display: flex;
   justify-content: space-between;
   //gap: VW(115px);
 
   padding: VW(60px) VW(360px);
 
-  &__left{
+  &__left {
     display: flex;
     flex-direction: column;
     //width: 100%;
 
-    &-info{
-        font-size: VW(24px);
+    &-info {
+      font-size: VW(24px);
     }
 
-    &-name{
+    &-name {
       display: flex;
       gap: VW(30px);
       align-items: center;
 
       margin-top: VW(30px);
 
-      p{
+      p {
         font-weight: 600;
         font-size: VW(24px);
       }
 
-      &-img{
+      &-img {
         cursor: pointer;
         width: VW(18px);
         height: VW(18px);
       }
     }
 
-    &-date{
+    &-date {
       display: flex;
       gap: VW(30px);
       margin-top: VW(15px);
 
-      p{
+      p {
         font-weight: 600;
         font-size: VW(16px);
         white-space: nowrap;
       }
     }
 
-    &-add{
+    &-add {
       display: flex;
       justify-content: space-between;
       align-items: center;
 
       margin-top: VW(52px);
 
-      &-text{
+      &-text {
         font-size: VW(24px);
       }
 
-      &-btn{
+      &-btn {
         width: VW(230px);
         height: VW(58px);
 
@@ -493,19 +493,19 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
         transition: background ease-in-out 250ms;
 
-        &:hover{
+        &:hover {
           background: #C80000;
         }
       }
     }
 
-    &-table{
+    &-table {
       display: flex;
       flex-direction: column;
       gap: VW(30px);
       margin-top: VW(44px);
 
-      &-item{
+      &-item {
         display: flex;
         gap: VW(50px);
         align-items: center;
@@ -518,19 +518,19 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
         border-style: solid;
         border-color: #D0D0D080;
 
-        &-links{
+        &-links {
           font-weight: 600;
           font-size: VW(18px);
           color: #FF0000;
 
           transition: color ease-in-out 250ms;
 
-          &:hover{
+          &:hover {
             color: #C80000;
           }
         }
 
-        &-date{
+        &-date {
           font-weight: 600;
           font-size: VW(18px);
 
@@ -540,24 +540,24 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
     }
   }
 
-  &__right{
+  &__right {
     min-width: VW(384px);
     width: VW(384px);
 
     display: flex;
     flex-direction: column;
 
-    &-header{
+    &-header {
       margin-bottom: VW(30px);
     }
 
-    &-text{
+    &-text {
       font-weight: 600;
       font-size: VW(18px);
       margin-bottom: VW(50px);
     }
 
-    &-btn{
+    &-btn {
       width: 100%;
       height: VW(58px);
 
@@ -578,40 +578,40 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
       transition: background ease-in-out 250ms;
 
-      &:hover{
+      &:hover {
         background: #1A0000;
       }
     }
   }
 }
 
-.analysis{
+.analysis {
   display: flex;
   flex-direction: column;
 
   padding: VW(60px) VW(360px);
 
-  &__header{
+  &__header {
     display: flex;
     gap: VW(60px);
   }
 
-  &__name{
+  &__name {
     font-weight: 600;
     margin: VW(30px) 0 VW(15px);
   }
 
-  &__info{
+  &__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    &-date{
+    &-date {
       font-weight: 600;
       font-size: VW(18px);
     }
 
-    &-btn{
+    &-btn {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -634,20 +634,20 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
       transition: background ease-in-out 250ms;
 
-      &:hover{
+      &:hover {
         background: #C80000;
       }
     }
   }
 
-  &__params{
+  &__params {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     margin: VW(50px) 0 VW(30px);
 
-    &-btn{
+    &-btn {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -670,7 +670,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
       transition: background ease-in-out 250ms;
 
-      &:hover{
+      &:hover {
         background: #1A0000;
       }
     }
@@ -714,12 +714,13 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
   //    }
   //  }
   //}
-  &__table{
+  &__table {
     border-collapse: collapse;
     width: 100%;
-    thead{
 
-      tr{
+    thead {
+
+      tr {
         border-top: VW(1px) solid #D0D0D080;
         border-bottom: VW(1px) solid #D0D0D080;
 
@@ -729,12 +730,12 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
         height: VW(60px);
 
-        th{
+        th {
           text-align: center;
           user-select: none;
           padding: 0;
 
-          &:nth-child(1){
+          &:nth-child(1) {
             text-align: left;
             padding-left: VW(60px);
             width: 45%;
@@ -748,8 +749,8 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
       }
     }
 
-    tbody{
-      tr{
+    tbody {
+      tr {
         border-bottom: VW(1px) solid #D0D0D080;
         padding: VW(19px) 0;
 
@@ -758,15 +759,16 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
         height: VW(60px);
 
-        td{
+        td {
           text-align: center;
           padding: 0;
 
-          &:nth-child(1){
+          &:nth-child(1) {
             text-align: left;
             padding-left: VW(60px);
           }
-          &:nth-child(2){
+
+          &:nth-child(2) {
             font-weight: 700;
           }
 
@@ -780,27 +782,27 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
   }
 }
 
-.add-analysis{
+.add-analysis {
   display: flex;
   flex-direction: column;
   gap: VW(50px);
 
   padding: VW(60px) VW(360px);
 
-  &__header{
+  &__header {
     display: flex;
     align-items: center;
 
-    &-name{
+    &-name {
       margin-right: VW(50px);
     }
 
-    &-text{
+    &-text {
       font-weight: 600;
       font-size: VW(18px);
     }
 
-    &-input{
+    &-input {
       font-weight: 600;
       font-size: VW(18px);
       padding: VW(2px) VW(26px);
@@ -814,13 +816,13 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
       margin-left: VW(2px);
 
-      &::placeholder{
+      &::placeholder {
         align-items: center;
         text-align: center;
       }
     }
 
-    &-btn{
+    &-btn {
       margin-left: auto;
 
       display: flex;
@@ -845,22 +847,22 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
       transition: background ease-in-out 250ms;
 
-      &:hover{
+      &:hover {
         background: #1A0000;
       }
     }
   }
 
-  &__analyse{
+  &__analyse {
     display: flex;
     flex-direction: column;
     gap: VW(30px);
 
-    &-head{
+    &-head {
       display: flex;
       justify-content: space-between;
 
-      &-delete{
+      &-delete {
         text-decoration: underline;
         background: none;
         border: none;
@@ -871,17 +873,18 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
         transition: color ease-in-out 250ms;
 
-        &:hover{
+        &:hover {
           color: #C80000;
         }
       }
     }
 
-    &-table{
+    &-table {
       border-collapse: collapse;
       width: 100%;
-      thead{
-        tr{
+
+      thead {
+        tr {
           border-top: VW(1px) solid #D0D0D080;
           border-bottom: VW(1px) solid #D0D0D080;
 
@@ -891,18 +894,18 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
           height: VW(60px);
 
-          th{
+          th {
             text-align: center;
             user-select: none;
             padding: 0;
 
-            &:nth-child(1){
+            &:nth-child(1) {
               text-align: left;
               padding-left: VW(60px);
               width: 45%;
             }
 
-            &:nth-child(2){
+            &:nth-child(2) {
               text-align: left;
             }
 
@@ -914,8 +917,8 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
         }
       }
 
-      tbody{
-        tr{
+      tbody {
+        tr {
           border-bottom: VW(1px) solid #D0D0D080;
           padding: VW(19px) 0;
 
@@ -924,15 +927,16 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
           height: VW(60px);
 
-          td{
+          td {
             text-align: center;
             padding: 0;
 
-            &:nth-child(1){
+            &:nth-child(1) {
               text-align: left;
               padding-left: VW(60px);
             }
-            &:nth-child(2){
+
+            &:nth-child(2) {
               font-weight: 700;
             }
 
@@ -941,7 +945,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
             //   padding-right: VW(60px);
             //}
 
-            input{
+            input {
               font-weight: 700;
               font-size: VW(18px);
               padding: VW(4px) VW(26px);
@@ -955,7 +959,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
               margin-left: VW(2px);
 
-              &::placeholder{
+              &::placeholder {
                 align-items: center;
                 text-align: center;
               }
@@ -965,12 +969,12 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
       }
     }
 
-    &_hide{
+    &_hide {
       display: none;
     }
   }
 
-  &__show{
+  &__show {
     align-self: flex-start;
     text-decoration: underline;
     background: none;
@@ -982,73 +986,147 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
     transition: color ease-in-out 250ms;
 
-    &:hover{
+    &:hover {
       color: #C80000;
     }
 
-    &_hide{
+    &_hide {
       display: none;
     }
   }
 }
 
-.graphs{
+.graphs {
   display: flex;
   flex-direction: column;
 
   padding: VW(60px) VW(360px);
 
-  &__name{
+  &__text {
+    position: relative;
+
+    &-print {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-decoration: none;
+      font-weight: 600;
+      font-size: VW(16px);
+
+      color: #FFFFFF;
+      background-color: #000000;
+
+      width: VW(320px);
+      height: VW(58px);
+
+      outline: none;
+      border: none;
+      border-radius: VW(15px);
+
+      cursor: pointer;
+
+      box-shadow: 0 0 VW(80px) 0 #00000014;
+
+      transition: background-color ease-in-out 250ms;
+
+      &:hover {
+        background-color: #1A0000;
+      }
+    }
+  }
+
+  &__name {
     font-weight: 600;
     margin: VW(30px) 0;
   }
 
-  &__info{
+  &__info {
     display: flex;
     align-items: center;
     gap: VW(60px);
 
-    &-date{
+    position: relative;
+
+    &-date {
       font-weight: 600;
       font-size: VW(18px);
     }
+
+    &-backbtn {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-decoration: none;
+      font-weight: 600;
+      font-size: VW(16px);
+
+      color: #FFFFFF;
+      background-color: #FF0000;
+
+      width: VW(320px);
+      height: VW(58px);
+
+      border-radius: VW(15px);
+
+      box-shadow: 0 0 VW(80px) 0 #00000014;
+
+
+      cursor: pointer;
+
+      transition: background-color ease-in-out 250ms;
+
+      &:hover {
+        background-color: #C80000;
+      }
+    }
   }
 
-  &__title{
+  &__title {
     margin: VW(50px) 0 VW(30px);
     align-self: center;
   }
 
-  &__result{
+  &__result {
     align-self: center;
     display: flex;
     gap: VW(50px);
 
-    &-pic{
+    &-pic {
       min-width: VW(608px);
       width: VW(608px);
 
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
     }
 
-    &-info{
+    &-info {
       width: 100%;
       display: flex;
       flex-direction: column;
       gap: VW(30px);
 
-      &-list{
+      &-list {
         list-style-position: inside;
-        li{
+
+        li {
           font-weight: 600;
           font-size: VW(20px);
         }
       }
 
-      &-additional{
+      &-additional {
         font-weight: 600;
         font-size: VW(16px);
         color: #00000080;
@@ -1056,11 +1134,15 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
     }
 
   }
+
+  &__analysis{
+    display: none;
+  }
 }
 
-.modal{
+.modal {
   top: 50%;
-  left : 50%;
+  left: 50%;
   translate: -50% -50%;
 
   padding: 0;
@@ -1069,11 +1151,11 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
   border: none;
   border-radius: VW(20px);
 
-  &::backdrop{
+  &::backdrop {
     background: none;
   }
 
-  &__content{
+  &__content {
     width: 100%;
     height: 100%;
 
@@ -1083,7 +1165,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
     padding: VW(30px);
 
-    &-close{
+    &-close {
       align-self: end;
 
       width: VW(15px);
@@ -1095,25 +1177,25 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
       cursor: pointer;
 
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
     }
 
-    &-title{
+    &-title {
       font-size: VW(40px);
 
       margin: VW(30px) 0 VW(20px);
     }
 
-    &-input-box{
+    &-input-box {
       position: relative;
       width: VW(320px);
       height: VW(58px);
       margin-top: VW(30px);
 
-      input{
+      input {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -1168,7 +1250,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
         }
       }
 
-      &-tick{
+      &-tick {
         position: absolute;
         right: VW(-32px);
         top: 50%;
@@ -1178,13 +1260,14 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
         transition: opacity 250ms ease-in-out;
         opacity: 0;
-        &_show{
+
+        &_show {
           opacity: 1;
         }
       }
     }
 
-    &-frgt-pass{
+    &-frgt-pass {
       font-weight: 600;
       font-size: VW(16px);
 
@@ -1200,12 +1283,12 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
       transition: color ease-in-out 250ms;
 
-      &:hover{
+      &:hover {
         color: #000000;
       }
     }
 
-    &-submit{
+    &-submit {
       width: VW(320px);
       height: VW(58px);
 
@@ -1225,18 +1308,18 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
       transition: background-color ease-in-out 250ms;
 
-      &:hover{
+      &:hover {
         background-color: #C80000;
       }
     }
 
-    &-text{
+    &-text {
       font-weight: 600;
       font-size: VW(16px);
 
       margin-top: VW(20px);
 
-      span{
+      span {
         font-weight: 600;
         font-size: VW(16px);
 
@@ -1245,27 +1328,28 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
         transition: background-color ease-in-out 250ms;
 
-        &:hover{
+        &:hover {
           color: #C80000;
         }
       }
+
       margin-bottom: auto;
     }
   }
 
-  &_auth{
+  &_auth {
     width: VW(470px);
     height: VW(583px);
     box-shadow: 0 0 VW(80px) 0 #00000014;
   }
 
-  &_regis{
+  &_regis {
     width: VW(820px);
     height: VW(630px);
 
     box-shadow: 0 0 VW(80px) 0 #56565614;
 
-    &__inputs{
+    &__inputs {
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: VW(30px);
@@ -1273,7 +1357,7 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 
   }
 
-  &_patient-regis{
+  &_patient-regis {
     width: VW(470px);
     height: VW(503px);
     box-shadow: 0 0 VW(80px) 0 #00000014;
@@ -1283,27 +1367,111 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li {
 .sortable th {
   cursor: pointer;
 }
+
 .sortable th.no-sort {
   pointer-events: none;
 }
+
 .sortable th::after,
 .sortable th::before {
   transition: color 0.2s ease-in-out;
   font-size: 1.2em;
   color: transparent;
 }
+
 .sortable th::after {
   margin-left: VW(3px);
   content: '\025B8';
 }
+
 .sortable th:hover::after {
   color: inherit;
 }
+
 .sortable th.dir-d::after {
   color: inherit;
   content: '\025BE';
 }
+
 .sortable th.dir-u::after {
   color: inherit;
   content: '\025B4';
+}
+
+@media print {
+  .header {
+    display: none;
+  }
+  .graphs__text-print {
+    display: none;
+  }
+
+  .graphs__info-backbtn {
+    display: none;
+  }
+
+  .graphs__analysis {
+    display: flex;
+    flex-direction: column;
+    gap: VW(30px);
+
+    margin-top: VW(50px);
+
+    &-table {
+      border-collapse: collapse;
+      width: 100%;
+
+      thead {
+        tr {
+          border-top: VW(1px) solid #D0D0D080;
+          border-bottom: VW(1px) solid #D0D0D080;
+
+          font-weight: 600;
+          font-size: VW(18px);
+          color: #00000080;
+
+          height: VW(60px);
+
+          th {
+            text-align: center;
+            user-select: none;
+            padding: 0;
+
+            &:nth-child(1) {
+              text-align: left;
+              padding-left: VW(60px);
+              width: 25%;
+            }
+
+            //&:last-child{
+            //  text-align: right;
+            //  padding-right: VW(60px);
+            //}
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          border-bottom: VW(1px) solid #D0D0D080;
+          padding: VW(19px) 0;
+
+          font-weight: 600;
+          font-size: VW(18px);
+
+          height: VW(60px);
+
+          td {
+            text-align: center;
+            padding: 0;
+
+            &:nth-child(1) {
+              text-align: left;
+              padding-left: VW(60px);
+            }
+          }
+        }
+      }
+    }
+  }
 }
