@@ -93,7 +93,16 @@
         </table>
     </div>
 
-    <h3 class="graphs__title">B-клеточное звено</h3>
+    <div class="graphs__title">
+        <h3 class="graphs__title-head">B-клеточное звено</h3>
+        <div class="graphs__title-pic">
+            <svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 13.4952L1 19L6.50476 17L19 4.50476L15.4952 1L3 13.4952Z" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.7998 4L15.9998 7.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.7998 13L6.9998 16.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
 
     <div class="graphs__result">
         <div class="graphs__result-pic">
@@ -120,7 +129,16 @@
         </div>
     </div>
 
-    <h3 class="graphs__title">T-клеточное звено</h3>
+    <div class="graphs__title">
+        <h3 class="graphs__title-head">T-клеточное звено</h3>
+        <div class="graphs__title-pic">
+            <svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 13.4952L1 19L6.50476 17L19 4.50476L15.4952 1L3 13.4952Z" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.7998 4L15.9998 7.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.7998 13L6.9998 16.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
 
     <div class="graphs__result">
         <div class="graphs__result-pic">
@@ -147,7 +165,16 @@
         </div>
     </div>
 
-    <h3 class="graphs__title">T-клеточное звено</h3>
+    <div class="graphs__title">
+        <h3 class="graphs__title-head">T-клеточное звено</h3>
+        <div class="graphs__title-pic">
+            <svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 13.4952L1 19L6.50476 17L19 4.50476L15.4952 1L3 13.4952Z" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.7998 4L15.9998 7.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.7998 13L6.9998 16.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
 
     <div class="graphs__result">
         <div class="graphs__result-pic">
@@ -174,6 +201,42 @@
         </div>
     </div>
 </section>
+
+<dialog class="modal modal_edit">
+    <form class="modal_edit__content">
+        <button class="modal_edit__content-close" id="closeEditBtn" formmethod="dialog">
+            <img src="../media/crossRed.svg" alt="закрыть"/>
+        </button>
+
+        <h2 class="modal_edit__content-title">B-клеточное звено</h2>
+
+        <div class="modal_edit__content-block">
+            <p class="modal_edit__content-block-head">Заключение по показателям B-клеточного звена:</p>
+
+            <div contenteditable="true" class="modal_edit__content-block-text">
+                <ol class="modal_edit__content-block-text-list">
+                    <li>Мало (ОВИД 1, 2, 3) или много (лимфоцитоз с превышением от нормы в 2 раза)</li>
+                    <li>Компенсируемый или нет</li>
+                    <li>Изменение динамики если есть</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="modal_edit__content-block">
+            <p class="modal_edit__content-block-head">Рекомендации для B-клеточного звена:</p>
+
+            <div contenteditable="true" class="modal_edit__content-block-text">
+                <ol class="modal_edit__content-block-text-list">
+                    <li>Мало (ОВИД 1, 2, 3) или много (лимфоцитоз с превышением от нормы в 2 раза)</li>
+                    <li>Компенсируемый или нет</li>
+                    <li>Изменение динамики если есть</li>
+                </ol>
+            </div>
+        </div>
+
+        <button type="submit" class="modal_edit__content-submit">Изменить</button>
+    </form>
+</dialog>
 
 <dialog class="modal modal_auth">
     <form class="modal__content">
@@ -257,8 +320,11 @@
     const openAuthBtn1 = document.getElementById('openAuthBtn')
     const openRegisBtn = document.getElementById('openRegisBtn')
     const closeRegisBtn = document.getElementById('closeRegisBtn')
+    const openEditBtn = document.querySelectorAll('.graphs__title-pic')
+    const closeEditBtn = document.getElementById('closeEditBtn')
     const authModal = document.querySelector('.modal_auth')
     const regisModal = document.querySelector('.modal_regis')
+    const editModal = document.querySelector('.modal_edit')
 
     openAuthBtn.addEventListener("click", () => {
         authModal.showModal()
@@ -303,6 +369,32 @@
             e.clientY > dialogDimensions.bottom
         ) {
             regisModal.close()
+        }
+    })
+
+    openEditBtn.forEach((e) =>{
+        e.addEventListener("click", () =>{
+            editModal.showModal()
+        })
+    })
+
+    // openEditBtn.addEventListener("click", () => {
+    //     editModal.showModal()
+    // })
+
+    closeEditBtn.addEventListener("click", () => {
+        editModal.close()
+    })
+
+    editModal.addEventListener("mousedown", e => {
+        const dialogDimensions = editModal.getBoundingClientRect()
+        if (
+            e.clientX < dialogDimensions.left ||
+            e.clientX > dialogDimensions.right ||
+            e.clientY < dialogDimensions.top ||
+            e.clientY > dialogDimensions.bottom
+        ) {
+            editModal.close()
         }
     })
 
