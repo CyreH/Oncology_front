@@ -28,9 +28,12 @@
             <p>Зубенко Михаил Петрович</p>
             <div class="patient__left-name-img">
                 <svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 13.4952L1 19L6.50476 17L19 4.50476L15.4952 1L3 13.4952Z" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12.7998 4L15.9998 7.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.7998 13L6.9998 16.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 13.4952L1 19L6.50476 17L19 4.50476L15.4952 1L3 13.4952Z" stroke="#FF0000"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.7998 4L15.9998 7.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M3.7998 13L6.9998 16.2" stroke="#FF0000" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
                 </svg>
             </div>
         </div>
@@ -82,9 +85,62 @@
         <h3 class="patient__right-header">Химиотерапия: Да</h3>
         <p class="patient__right-text">Комментарий о курсах химиотерапии, который говорит нам о химиотерапии</p>
 
-        <button class="patient__right-btn">Редактировать данные</button>
+        <button id="openDataBtn" class="patient__right-btn">Редактировать данные</button>
     </div>
 </section>
+
+<dialog class="modal modal_data">
+    <form class="modal_data__content">
+        <button class="modal_data__content-close" id="closeDataBtn" formmethod="dialog">
+            <img src="../media/crossRed.svg" alt="закрыть"/>
+        </button>
+
+        <h2 class="modal_data__content-title">Данные</h2>
+
+        <div class="modal_data__content-block">
+            <p class="modal_data__content-block-head">Диагноз</p>
+            <input type="text" class="modal_data__content-block-input" placeholder="Диагноз">
+            <p class="modal_data__content-block-head">Комментарий</p>
+            <div contenteditable="true" class="modal_data__content-block-text">
+                Комментарий о диагнозе, который говорит нам о диагнозе, который говорит
+            </div>
+        </div>
+
+        <div class="modal_data__content-block">
+            <p class="modal_data__content-block-head">Дата операции</p>
+            <input type="text" class="modal_data__content-block-input" placeholder="Дата операции">
+            <p class="modal_data__content-block-head">Комментарий</p>
+            <div contenteditable="true" class="modal_data__content-block-text">
+                Комментарий о диагнозе, который говорит нам о диагнозе, который говорит
+            </div>
+        </div>
+
+        <div class="modal_data__content-block">
+            <p class="modal_data__content-block-head">Химиотерапия</p>
+            <div class="modal_data__content-block-radios">
+                <input class="visually-hidden" type="radio" name="editDataCheckboxes" value="Yes"
+                       id="editDataCheckboxYes">
+                <label for="editDataCheckboxYes">
+                    Да
+                    <span></span>
+                </label>
+                <input class="visually-hidden" type="radio" name="editDataCheckboxes" value="No"
+                       id="editDataCheckboxNo">
+                <label for="editDataCheckboxNo">
+                    Нет
+                    <span></span>
+                </label>
+            </div>
+            <p class="modal_data__content-block-head">Комментарий</p>
+            <div contenteditable="true" class="modal_data__content-block-text">
+                Комментарий о диагнозе, который говорит нам о диагнозе, который говорит
+            </div>
+        </div>
+
+        <button type="submit" class="modal_data__content-submit">Изменить</button>
+
+    </form>
+</dialog>
 
 <dialog class="modal modal_patient-regis">
     <form class="modal__content">
@@ -191,10 +247,13 @@
     const openAuthBtn1 = document.getElementById('openAuthBtn')
     const openRegisBtn = document.getElementById('openRegisBtn')
     const closeRegisBtn = document.getElementById('closeRegisBtn')
+    const openDataBtn = document.getElementById('openDataBtn')
+    const closeDataBtn = document.getElementById('closeDataBtn')
 
     const authModal = document.querySelector('.modal_auth')
     const regisModal = document.querySelector('.modal_regis')
     const patientRegisModal = document.querySelector('.modal_patient-regis')
+    const dataModal = document.querySelector('.modal_data')
 
     openPatientRegisBtn.addEventListener("click", () => {
         patientRegisModal.showModal()
@@ -259,6 +318,26 @@
             e.clientY > dialogDimensions.bottom
         ) {
             regisModal.close()
+        }
+    })
+
+    openDataBtn.addEventListener("click", () => {
+        dataModal.showModal()
+    })
+
+    closeDataBtn.addEventListener("click", () => {
+        dataModal.close()
+    })
+
+    dataModal.addEventListener("mousedown", e => {
+        const dialogDimensions = dataModal.getBoundingClientRect()
+        if (
+            e.clientX < dialogDimensions.left ||
+            e.clientX > dialogDimensions.right ||
+            e.clientY < dialogDimensions.top ||
+            e.clientY > dialogDimensions.bottom
+        ) {
+            dataModal.close()
         }
     })
 

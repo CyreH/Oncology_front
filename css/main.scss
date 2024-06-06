@@ -1377,6 +1377,185 @@ a, p, h1, h2, h3, h4, h5, h6, button, input, label, table, tr, ol, li, div, text
 
   }
 
+  &_data {
+    width: VW(1170px);
+    height: VW(631px);
+    box-shadow: 0 0 VW(80px) 0 #00000014;
+    &__content{
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      display: grid;
+      align-items: start;
+      justify-items: center;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: max-content;
+      gap: VW(50px) VW(30px);
+
+      padding: VW(75px);
+
+      &-close {
+        position: absolute;
+
+        top: VW(30px);
+        right: VW(30px);
+
+        width: VW(15px);
+        height: VW(15px);
+
+        outline: none;
+        border: none;
+        background: none;
+
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &-title {
+        grid-column: 1/4;
+        font-size: VW(40px);
+
+        //margin: VW(30px) 0 VW(20px);
+      }
+
+
+
+      &-block{
+        width: 100%;
+        height: VW(274px);
+
+        display: flex;
+        flex-direction: column;
+        gap: VW(20px);
+
+        &-head{
+          font-weight: 700;
+          font-size: VW(16px);
+          //width: VW(300px);
+        }
+
+        &-input{
+          width: 100%;
+
+          padding: VW(19px) VW(30px);
+
+          outline: none;
+          border-radius: VW(15px);
+          border: VW(2px) solid #00000080;
+
+          font-weight: 600;
+          font-size: VW(16px);
+
+          &::placeholder{
+            font-weight: 600;
+            font-size: VW(16px);
+          }
+        }
+
+        &-radios{
+          min-height: VW(58px);
+          display: flex;
+          align-items: center;
+          gap: VW(30px);
+
+          label{
+            display: flex;
+            align-items: center;
+            gap: VW(10px);
+            font-weight: 600;
+            font-size: VW(16px);
+
+            cursor: pointer;
+            user-select: none;
+
+            span{
+              display: block;
+              //content: "";
+              width: VW(14px);
+              height: VW(14px);
+
+              background: url("../media/radioUnchecked.svg") 0 0 / 100% 100% no-repeat;
+            }
+          }
+
+          input{
+            width: VW(16px);
+            height: VW(16px);
+            cursor: pointer;
+
+            //&:checked{
+            //  accent-color: #FF0000;
+            //}
+          }
+
+          input[type="radio"]:checked + label{
+            color: #FF0000;
+
+            span{
+              display: block;
+              //content: "";
+              width: VW(14px);
+              height: VW(14px);
+
+              background: url("../media/radioChecked.svg") 0 0 / 100% 100% no-repeat;
+            }
+          }
+        }
+
+        &-text{
+          width: VW(320px);
+          height: 100%;
+
+          padding: VW(19px) VW(30px);
+          outline: none;
+          border-radius: VW(15px);
+          border: VW(2px) solid #00000080;
+
+          font-weight: 600;
+          font-size: VW(16px);
+
+          overflow-y: auto;
+          overscroll-behavior: contain;
+
+          p {
+            font-weight: 600;
+            font-size: VW(16px);
+          }
+        }
+      }
+
+
+      &-submit {
+        grid-column: 1/4;
+        width: VW(320px);
+        height: VW(58px);
+
+        font-weight: 600;
+        font-size: VW(16px);
+
+        color: #FFFFFF;
+        background-color: #FF0000;
+
+        outline: none;
+        border: none;
+        border-radius: VW(15px);
+
+        cursor: pointer;
+
+        transition: background-color ease-in-out 250ms;
+
+        &:hover {
+          background-color: #C80000;
+        }
+      }
+    }
+  }
+
   &_patient-regis {
     width: VW(470px);
     height: VW(503px);
